@@ -36,7 +36,6 @@ body
 button 
 {
     grid-area: button;
-
     width: 100px;
     height: 40%;
     justify-self: center;
@@ -46,6 +45,8 @@ button
 {
     grid-area: quote;
     position: relative;
+    max-height: 200px;
+    overflow: hidden;
 }
 #quote 
 {
@@ -56,7 +57,7 @@ button
 }
 #author
 {
-    position: absolute;
-    right: 10;
-    bottom: 50;
+    grid-area: button;
+    margin-top: 0px;
+    justify-self: right;
 }
