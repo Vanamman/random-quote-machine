@@ -1,13 +1,46 @@
 var colors = [" #9b59b6", "#2980b9", "#27ae60", "#cb4335", "#17a589", "#b7950b", "#d35400"];
 
-//change background color of page when button is clicked.
-//make quote, tweet button, and new quote button mirror the page color
 
-$(document).ready(function() {
-    colors = colors[Math.floor(colors.length * Math.random())];
-    $("body").css("background-color", colors);
-    $('button').css("background-color", colors);
-    $('#tweet').css("color", colors);
-    $('#quote').css("color", colors);
-    $('#author').css("color", colors);
+
+function parseQuote(response) 
+{
+    console.log(response);
+    $("#quote").text(response.quoteText);
+    $("#author").text(response.quoteAuthor);
+}
+
+$(document).ready(function() 
+{
+
+    function getQuote() 
+    {
+        $.ajax({
+            url: "http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=parseQuote",
+            method: 'GET',
+            dataType: "jsonp",
+        });
+    }
+    getQuote();
+    
+    function colorChange() 
+    {
+        var color = colors[Math.floor(colors.length * Math.random())];
+        $("body").css("background-color", color);
+        $('button').css("background-color", color);
+        $('#tweet').css("color", color);
+        $('#quote').css("color", color);
+        $('#author').css("color", color);
+    }
+    colorChange();
+
+    $('button').click(function() 
+    {
+        getQuote();
+        colorChange();
+    });
+
+    $('#tweet').click(function()
+    {
+        $(this).attr("href", "https://twitter.com/intent/tweet?text=" + parseQuote(response.quoteText))
+    });
 });
