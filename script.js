@@ -38,9 +38,4 @@ $(document).ready(function()
         getQuote();
         colorChange();
     });
-
-    $('#tweet').click(function()
-    {
-        $(this).attr("href", "https://twitter.com/intent/tweet?text=" + parseQuote(response.quoteText))
-    });
 });
