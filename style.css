@@ -44,20 +44,22 @@ button
 .quote 
 {
     grid-area: quote;
-    position: relative;
     max-height: 200px;
+    max-width: 450px;
+    justify-self: center;
+    align-self: center;
     overflow: hidden;
 }
 #quote 
 {
     background-color: inherit;
-    padding: 10px;
-    margin-left: 10px;
     font-size: 20px;
 }
 #author
 {
-    grid-area: button;
-    margin-top: 0px;
+    grid-area: quote;
     justify-self: right;
+    align-self: center;
+    margin-top: 180px;
+    margin-right: 10px;
 }
