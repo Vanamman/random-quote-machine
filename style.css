@@ -29,9 +29,9 @@ body
 #tweet 
 {
     grid-area: tweet;
-    background-color: inherit;
     justify-self: center;
     align-self: center;
+    background-color: inherit;
     text-decoration: none;
     height: 40%;
 }
