@@ -16,7 +16,7 @@ body
     grid-template-areas: 
         "quote quote quote"
         "quote quote quote"
-        "tweet . button";
+        "tweet button author";
     grid-column: 1/-1;
     grid-row: 1/-1;
     margin-top: 25%;
@@ -59,7 +59,7 @@ button
 }
 #author
 {
-    grid-area: button;
-    margin-top: 0px;
-    margin-right: 10px;
+    grid-area: author;
+    justify-self: center;
+    align-self: center;
 }
