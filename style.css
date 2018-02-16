@@ -1,4 +1,7 @@
-
+body, html {
+	height: 100%;
+	display: grid;
+}
 .container {
 	display: grid;
 	place-items: center;
@@ -7,6 +10,7 @@
 }
 .wrapper {
 	display: grid;
+	margin: auto;
 	place-items: center;
 	grid-template-columns: repeat(3, 200px);
 	grid-template-rows: repeat(3, 100px);
@@ -16,7 +20,7 @@
 		"tweet button author";
 	grid-column: 1/-1;
 	grid-row: 1/-1;
-	margin-top: 25%;
+	margin-top: auto;
 	border: 1px solid black;
 	background-color: white;
 	height: 300px;
