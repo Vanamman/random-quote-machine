@@ -1,13 +1,13 @@
-body {
-	background-color: #555555;
-}
+
 .container {
 	display: grid;
+	place-items: center;
 	grid-template-columns: repeat(auto, minmax(100px, 1fr));
 	grid-template-rows: repeat(auto, minmax(100px, 1fr));
 }
 .wrapper {
 	display: grid;
+	place-items: center;
 	grid-template-columns: repeat(3, 200px);
 	grid-template-rows: repeat(3, 100px);
 	grid-template-areas:
@@ -17,7 +17,6 @@ body {
 	grid-column: 1/-1;
 	grid-row: 1/-1;
 	margin-top: 25%;
-	justify-self: center;
 	border: 1px solid black;
 	background-color: white;
 	height: 300px;
@@ -25,9 +24,6 @@ body {
 }
 #tweet {
 	grid-area: tweet;
-	justify-self: center;
-	align-self: center;
-	background-color: inherit;
 	text-decoration: none;
 	height: 40%;
 }
@@ -35,23 +31,15 @@ button {
 	grid-area: button;
 	width: 100px;
 	height: 40%;
-	justify-self: center;
-	align-self: center;
 }
 .quote {
 	grid-area: quote;
 	max-height: 200px;
-	max-width: 450px;
-	justify-self: center;
-	align-self: center;
 	overflow: hidden;
 }
 #quote {
-	background-color: inherit;
 	font-size: 20px;
 }
 #author {
 	grid-area: author;
-	justify-self: center;
-	align-self: center;
 }
